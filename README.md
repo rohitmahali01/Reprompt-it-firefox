@@ -6,7 +6,8 @@
 
 <div align="center">
 
-![Rephrase-It Logo](https://via.placeholder.com/150x150?text=Rephrase-It)
+<img width="32" height="32" alt="image" src="https://github.com/user-attachments/assets/bc95aecb-2eae-4ed2-ac8d-e84bcfb5d454" />
+
 
 **Intelligent text rephrasing powered by OpenAI GPT and Google Gemini - Firefox Exclusive**
 
