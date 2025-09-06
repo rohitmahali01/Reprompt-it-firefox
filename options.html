@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Reprompt-It • Options</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 24px; }
+    label { display: block; margin-bottom: 12px; }
+    input, select { width: 320px; padding: 6px; }
+    #status { color: green; margin-left: 8px; }
+  </style>
+</head>
+<body>
+  <h2>API keys</h2>
+
+  <label>OpenAI key:
+    <input id="key" type="password" placeholder="sk-..." />
+  </label>
+
+  <label>Google key:
+    <input id="gkey" type="password" placeholder="AIza..." />
+  </label>
+
+  <h2>Defaults</h2>
+
+  <label>Provider:
+    <select id="provider">
+      <option value="openai">OpenAI (ChatGPT)</option>
+      <option value="gemini">Gemini</option>
+    </select>
+  </label>
+
+  <label>OpenAI model:
+    <select id="openaiModel"></select>
+  </label>
+
+  <label>Gemini model:
+    <select id="geminiModel"></select>
+  </label>
+
+  <button id="save">Save</button>
+  <span id="status"></span>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>

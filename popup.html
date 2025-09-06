@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Reprompt-It</title>
+<style>
+  body{font:13px/1.4 sans-serif;margin:14px 16px;width:280px}
+  label{display:block;margin-top:10px;font-weight:600}
+  select,input{width:100%;padding:6px;margin-top:4px;font:inherit}
+  button{margin-top:12px;padding:6px 12px;width:100%}
+  #ok{color:green;text-align:center;margin-top:6px;height:16px}
+  .provider-section{
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+  }
+  .section-title{
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+  <!-- Default Provider Selection -->
+  <label>Default Provider</label>
+  <select id="default-provider">
+    <option value="openai">OpenAI</option>
+    <option value="gemini">Gemini</option>
+  </select>
+
+  <!-- OpenAI Configuration Section -->
+  <div class="provider-section">
+    <div class="section-title">OpenAI Configuration</div>
+    <label>Model</label>
+    <select id="openai-model">
+      <option value="gpt-4o">GPT-4o</option>
+      <option value="gpt-4o-mini">GPT-4o Mini</option>
+      <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+    </select>
+
+    <label>API Key</label>
+    <input id="openai-key" type="password" placeholder="sk-…" />
+  </div>
+
+  <!-- Gemini Configuration Section -->
+  <div class="provider-section">
+    <div class="section-title">Gemini Configuration</div>
+    <label>Model</label>
+    <select id="gemini-model">
+      <option value="gemini-2.5-pro">Gemini 2.5 Pro</option>
+      <option value="gemini-2.5-flash">Gemini 2.5 Flash</option>
+      <option value="gemini-2.5-flash-lite">Gemini 2.5 Flash-Lite</option>
+      <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
+      <option value="gemini-2.0-flash-lite">Gemini 2.0 Flash-Lite</option>
+    </select>
+
+    <label>API Key</label>
+    <input id="gemini-key" type="password" placeholder="AIza…" />
+  </div>
+
+  <button id="save">Save</button>
+  <div id="ok"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
