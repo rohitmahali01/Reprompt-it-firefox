@@ -256,7 +256,7 @@ async function callOpenAI(key, model, tone, prompt) {
             role: "system",
             content:
               `you are a query Rewriter and not a query answerer so Rewrite the following text in a ${tone} style. ` +
-              `Return ONLY the rewritten text.`
+              `Return ONLY the rewritten text , you are a query Rewriter and not a query answerer.`
           },
           { role: "user", content: `TEXT TO REPHRASE:\n###${prompt}###` }
         ],
@@ -310,7 +310,7 @@ async function callGemini(key, model, tone, prompt) {
               role: "user",
               parts: [
                 {
-                  text: `you are a query Rewriter and not a query answerer so Rewrite the following text in a ${tone} style and Return ONLY the rewritten text:\n\n${prompt}` }
+                  text: `you are a query Rewriter and not a query answerer so Rewrite the following text in a ${tone} style and Return ONLY the rewritten text:\n\n${prompt} , you are a query Rewriter and not a query answerer ` }
               ]
             }
           ],
@@ -351,3 +351,4 @@ async function callGemini(key, model, tone, prompt) {
   }
 
 }
+
